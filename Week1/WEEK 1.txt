@@ -1,0 +1,90 @@
+1.def a(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+num = int(input("Enter a number: "))
+if a(num):
+    print(num, "is a prime number.")
+else:
+    print(num, "is not a prime number.")
+
+2.def a(number):
+    number_str = str(number)
+    b = 0
+    for digit in number_str:
+        b += int(digit)
+    return b
+number = int(input("Enter a number: "))
+sum_of_digits = a(number)
+print("The sum of the digits is:", sum_of_digits)
+
+3.
+x=int(input('Enter a Number :'))
+temp=x
+rev=0
+if(int(x)):
+    print('This is Integer')
+else:
+    print('This is Not Integer')
+while(x>0):
+    dig=x%10
+    rev=rev*10+dig
+    x=x//10
+if(temp==rev):
+    print('The Number is a Palindrome')
+else:
+    print('The Number is Not Palindrome')
+
+4.#Write a python script to enter any number, if it is integer number, then check its armstrong or not. Print appropriate message if it is not palindrom.
+def arm(number):
+    no = str(number)
+    no_d = len(no)
+    digit_sum = 0
+    for digit in no:
+        digit_sum += int(digit) ** no_d
+    if digit_sum == number:
+        return True
+    else:
+        return False
+number = input("Enter a number: ")
+if number.isdigit():
+    number = int(number)
+    if arm(number):
+        print("The number is an Armstrong number.")
+    else:
+        print("The number is not an Armstrong number.")
+else:
+    print("Invalid input. Please enter an integer number.")
+
+5.#Write a python script to enter any string and count vowel.
+str=input('Enter A String :')
+vow=0
+for i in str:
+    if(i=='a' or i=='A' or i=='e' or i=='E' or i=='i' or i=='I' or i=='o' or i=='O' or i=='u' or i=='U'):
+        vow=vow+1
+print('Number of Vowels Are :')
+print(vow)
+
+6.#Write a python script to enter any string and print only part of string. Take input of start character and end character from user.
+x=input('Enter a String :')
+count=0
+for i in x:
+    count=count+1
+a=x[0:2]+x[count-2:count]
+print('Input String ='+x)
+print('New String ='+a)
+
+7.olds=input('Enter Any String :')
+char=input('Enter a character to replace all vowal with it :')
+new=''
+for i in range(len(olds)):
+    if olds[i]=='a' or olds[i]=='A' or olds[i]=='e' or olds[i]=='E' or olds[i]=='i' or olds[i]=='I' or olds[i]=='o' or olds[i]=='O' or olds[i]=='u' or olds[i]=='U' :
+        new=new+char
+    else:
+        new=new+olds[i]
+
+print('\nOriginal String :',olds)
+print('\nNew String :',new)
